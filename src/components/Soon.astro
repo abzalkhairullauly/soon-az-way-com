@@ -1,0 +1,83 @@
+---
+export interface Props {
+  title: string;
+  img: string;
+  href: string;
+  date: string;
+}
+
+const { title, img, href, date  } = Astro.props;
+---
+
+<astro-soon data-date={date}>
+  <a href={href} target="_blank" rel="noopener"
+     class="card">
+    <div class="w-72 text-center md:pb-0 pb-4">
+      <h2 class="md:text-7xl text-5xl font-bold">{title}</h2>
+      <span id="count-down" class="md:text-3xl text-xl block mt-4"></span>
+    </div>
+    <div class="w-56 h-full relative">
+      <img src={img} alt={title} class="absolute w-56 md:h-96 h-56 bottom-0"/>
+    </div>
+  </a>
+</astro-soon>
+
+<style>
+  .card {
+      @apply flex md:flex-row flex-col flex-col-reverse h-72 rounded-2xl -mt-56 justify-around items-center shadow-lg bg-gradient-to-br from-orange-500/30 to-blue-500/20 backdrop-blur-md;
+      background-size: 200% 200%;
+      animation: gradient 7s ease infinite;
+  }
+  @keyframes gradient {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+  }
+</style>
+
+<script>
+  class Soon extends HTMLElement {
+    constructor() {
+      super();
+
+      if (!this.dataset.date) return;
+      // Set the date we're counting down to
+      const countDownDate = new Date(this.dataset.date).getTime();
+      if (countDownDate) {
+        // Update the count-down every 1 second
+        const x = setInterval(function() {
+
+          // Get today's date and time
+          const now = new Date().getTime();
+
+          // Find the distance between now and the count-down date
+          const distance = countDownDate - now;
+
+          // Time calculations for days, hours, minutes and seconds
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          // Display the result in the element with id="demo"
+          document.getElementById("count-down").innerHTML = days + "kún " + hours + "s. "
+            + minutes + "m. " + seconds + "s.";
+
+          // If the count-down is finished, write some text
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("count-down").style.display = "none";
+          }
+        }, 1000);
+      }
+    }
+  }
+
+  customElements.define('astro-soon', Soon);
+</script>

@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Soon from '../components/Soon.astro';
+---
+
+<Layout title="AZ-Way: SOON...">
+	<main class="bg-[url('/assets/images/bg-main.svg')] bg-bottom bg-cover">
+    <section class="container px-8 max-w-5xl mx-auto flex justify-between md:pt-36 md:flex-row pb-80 flex-col flex-col-reverse items-center pt-4">
+      <div class="md:max-w-2xl max-w-full md:text-left text-center">
+        <h1 class="md:w-96 w-full md:text-4xl text-3xl font-bold md:w-full md:mt-0 mt-4">Óz jolymdy bólisý úshin ázirlenýde</h1>
+        <p class="md:text-2xl text-xl mt-8">
+          Nıetim: adamǵa rýhanı, ıntellektýaldyq, fızıkalyq, qarjylaı, otbasylyq damýǵa kómektesý, Alla razylyǵy úshin.
+        </p>
+      </div>
+      <img src="/assets/images/az-way-com.svg" alt="AZ-Way for Community" class="inline-block md:w-60 md:h-60 w-56 h-56 md:ml-9 ml-0"/>
+    </section>
+	</main>
+  <section class="container px-8 max-w-5xl mx-auto">
+    <Soon
+        title="Jýyrda"
+        img="/assets/images/otkende-gana.svg"
+        href="https://az-way.notion.site/az-way-com-8342387d14b849fd995d667ea444e032"
+        date="2023-02-14T23:59:59"/>
+  </section>
+  <footer class="container px-8 max-w-5xl mx-auto flex md:flex-nowrap flex-wrap md:justify-between justify-center items-center mt-36 pb-12">
+    <div class="w-36">
+      <img class="md:mx-0 mx-auto w-9 h-9" src="/assets/images/az-way-com-footer.png" alt="AZ-Way grayscaled"/>
+    </div>
+    <span class="block md:my-0 my-2">2023 · AZ-Way by Abzal</span>
+    <ul class="flex md:justify-end justify-center items-center text-right md:w-36 w-full">
+      <li class="inline-block ml-2.5">
+        <a href="https://twitter.com/az_logbook" target="_blank" rel="noopener">
+          <img class="w-6 h-6" src="/assets/icons/twitter.svg" alt="twitter"/>
+        </a>
+      </li>
+      <li class="inline-block ml-2.5">
+        <a href="https://instagram.com/az.way.notes" target="_blank" rel="noopener">
+          <img class="w-6 h-6" src="public/assets/icons/instagram.svg" alt="instagram"/>
+        </a>
+      </li>
+      <li class="inline-block ml-2.5">
+        <a href="http://www.youtube.com/channel/UCtW95DSAa04kqLAGL19szXQ" target="_blank" rel="noopener">
+          <img class="w-6 h-6" src="/assets/icons/youtube.svg" alt="youtube"/>
+        </a>
+      </li>
+    </ul>
+  </footer>
+</Layout>

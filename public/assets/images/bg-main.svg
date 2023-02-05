@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280px" height="669px" viewBox="0 0 1280 669" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 5</title>
+    <defs>
+        <linearGradient x1="0%" y1="36.3415222%" x2="100%" y2="63.6584778%" id="linearGradient-1">
+            <stop stop-color="#FFF4F3" offset="0%"></stop>
+            <stop stop-color="#FE7D40" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="36.3415222%" x2="100%" y2="63.6584778%" id="linearGradient-2">
+            <stop stop-color="#F76F5D" offset="0%"></stop>
+            <stop stop-color="#FE7D40" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="5.-Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-5">
+            <polygon id="Path" fill="url(#linearGradient-1)" points="0 0 0 669 724 449.568 1280 669 1280 0"></polygon>
+            <polygon id="Path-3" fill="url(#linearGradient-2)" points="0 0 826 669 1280 0"></polygon>
+        </g>
+    </g>
+</svg>
